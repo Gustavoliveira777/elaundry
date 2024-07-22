@@ -7,10 +7,11 @@ type Maquina struct {
 	capacidade   int
 	instrucaoUso string
 	tipoMaquina  Tipo
+	ativo        bool
 }
 
-func MaquinaFactory(maquinaId int, marca string, tempoCiclo int, capacidade int, instrucaoUso string, tipoMaquina Tipo) Maquina {
-	return Maquina{maquinaId: maquinaId, marca: marca, tempoCiclo: tempoCiclo, capacidade: capacidade, instrucaoUso: instrucaoUso, tipoMaquina: tipoMaquina}
+func MaquinaFactory(maquinaId int, marca string, tempoCiclo int, capacidade int, instrucaoUso string, tipoMaquina Tipo, ativo bool) Maquina {
+	return Maquina{maquinaId: maquinaId, marca: marca, tempoCiclo: tempoCiclo, capacidade: capacidade, instrucaoUso: instrucaoUso, tipoMaquina: tipoMaquina, ativo: ativo}
 }
 
 func (m *Maquina) SetMaquinaId(id int) {
@@ -31,6 +32,10 @@ func (m *Maquina) SetInstrucaoUso(instrucaoUso string) {
 }
 func (m *Maquina) SetTipoMaquina(tipoMaquina Tipo) {
 	m.tipoMaquina = tipoMaquina
+}
+
+func (m *Maquina) SetAtivo(ativo bool) {
+	m.ativo = ativo
 }
 
 func (m Maquina) GetMaquinaId() int {
@@ -55,4 +60,8 @@ func (m Maquina) GetInstrucaoUso() string {
 
 func (m Maquina) GetTipoMaquina() Tipo {
 	return m.tipoMaquina
+}
+
+func (m Maquina) IsAtivo() bool {
+	return m.ativo
 }
