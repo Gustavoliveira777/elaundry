@@ -1,13 +1,13 @@
 package model
 
 type Tipo struct {
-	tipoId              int
-	nome                string
-	precoHora           float32
-	precoFixoCapacidade float32
+	TipoId              int `gorm:"primaryKey;autoIncrement"`
+	Nome                string
+	PrecoHora           float32
+	PrecoFixoCapacidade float32
 }
 
-func TipoFactory(tipoId int, nome string, precoHora float32, precoFixoCapacidade float32) Tipo {
+/* func TipoFactory(tipoId int, nome string, precoHora float32, precoFixoCapacidade float32) Tipo {
 	return Tipo{tipoId: tipoId, nome: nome, precoHora: precoHora, precoFixoCapacidade: precoFixoCapacidade}
 }
 
@@ -38,4 +38,4 @@ func (t Tipo) GetPrecoHora() float32 {
 
 func (t Tipo) GetPrecoFixoCapacidade() float32 {
 	return t.precoHora
-}
+} */

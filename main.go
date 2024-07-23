@@ -1,13 +1,20 @@
 package main
 
 import (
+	"elaundry/connection"
 	"elaundry/model"
+	"elaundry/repository"
 	"fmt"
 )
 
 func main() {
 	fmt.Println("E aí, tudo bom?")
-	pessoa := model.UsuarioFactory(10, "José Alencar", "ze@zemail.com", "12312312", false)
-	// pessoa.SetNomeCompleto("José")
-	fmt.Printf("Nome completo: %s\n Id: %d", pessoa.GetNomeCompleto(), pessoa.GetUsuarioId())
+	user := model.Usuario{NomeCompleto: "Zé", Email: "zezin@tonho.com", Senha: "senha", Funcionario: false}
+	userRepository := repository.UsuarioRepository{DbConnection: connection.CreateDbConn()}
+	userRepository.UsuarioCreateOrUpdateTable()
+	userRepository.UsuarioSave(&user)
+
+	var users []model.Usuario
+	userRepository.TodosUsuarios(&users)
+	fmt.Println(users)
 }

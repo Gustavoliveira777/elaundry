@@ -1,16 +1,16 @@
 package model
 
 type Maquina struct {
-	maquinaId    int
-	marca        string
-	tempoCiclo   int
-	capacidade   int
-	instrucaoUso string
-	tipoMaquina  Tipo
-	ativo        bool
+	MaquinaId    int
+	Marca        string
+	TempoCiclo   int
+	Capacidade   int
+	InstrucaoUso string
+	TipoMaquina  Tipo
+	Ativo        bool
 }
 
-func MaquinaFactory(maquinaId int, marca string, tempoCiclo int, capacidade int, instrucaoUso string, tipoMaquina Tipo, ativo bool) Maquina {
+/* func MaquinaFactory(maquinaId int, marca string, tempoCiclo int, capacidade int, instrucaoUso string, tipoMaquina Tipo, ativo bool) Maquina {
 	return Maquina{maquinaId: maquinaId, marca: marca, tempoCiclo: tempoCiclo, capacidade: capacidade, instrucaoUso: instrucaoUso, tipoMaquina: tipoMaquina, ativo: ativo}
 }
 
@@ -64,4 +64,4 @@ func (m Maquina) GetTipoMaquina() Tipo {
 
 func (m Maquina) IsAtivo() bool {
 	return m.ativo
-}
+} */

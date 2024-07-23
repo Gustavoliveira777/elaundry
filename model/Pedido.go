@@ -1,16 +1,16 @@
 package model
 
 type Pedido struct {
-	pedidoId          int
-	agendamentos      []Agendamento
-	valorTotal        float32
-	base64Comprovante string
-	pagamentoAprovado bool
-	usuarioRequerente Usuario
-	usuarioAprovador  Usuario
+	PedidoId          int `gorm:"primaryKey;autoIncrement"`
+	Agendamentos      []Agendamento
+	ValorTotal        float32
+	Base64Comprovante string
+	PagamentoAprovado bool
+	UsuarioRequerente Usuario
+	UsuarioAprovador  Usuario
 }
 
-func PedidoFactory(pedidoId int, agendamentos []Agendamento, valorTotal float32, base64Comprovante string, pagamentoAprovado bool, usuarioRequerente Usuario, usuarioAprovador Usuario) Pedido {
+/* func PedidoFactory(pedidoId int, agendamentos []Agendamento, valorTotal float32, base64Comprovante string, pagamentoAprovado bool, usuarioRequerente Usuario, usuarioAprovador Usuario) Pedido {
 	return Pedido{
 		pedidoId:          pedidoId,
 		agendamentos:      agendamentos,
@@ -75,4 +75,4 @@ func (p Pedido) GetUsuarioRequerente() Usuario {
 
 func (p Pedido) GetUsuarioAprovador() Usuario {
 	return p.usuarioAprovador
-}
+} */

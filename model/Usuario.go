@@ -1,14 +1,14 @@
 package model
 
 type Usuario struct {
-	usuarioId    int
-	nomeCompleto string
-	email        string
-	senha        string
-	funcionario  bool
+	UsuarioId    int `gorm:"primaryKey;autoIncrement"`
+	NomeCompleto string
+	Email        string `gorm:"uniqueIndex"`
+	Senha        string
+	Funcionario  bool
 }
 
-func UsuarioFactory(usuarioId int, nomeCompleto string, email string, senha string, funcionario bool) Usuario {
+/* func UsuarioFactory(usuarioId int, nomeCompleto string, email string, senha string, funcionario bool) Usuario {
 	return Usuario{usuarioId: usuarioId, nomeCompleto: nomeCompleto, email: email, senha: senha, funcionario: funcionario}
 }
 
@@ -45,3 +45,4 @@ func (u Usuario) GetSenha() string {
 func (u Usuario) IsFuncionario() bool {
 	return u.funcionario
 }
+*/

@@ -6,14 +6,14 @@ import (
 )
 
 type Agendamento struct {
-	agendamentoId  int
-	maquina        Maquina
-	dataHoraInicio time.Time
-	dataHoraFim    time.Time
-	status         enum.StatusEnum
+	AgendamentoId  int
+	Maquina        Maquina
+	DataHoraInicio time.Time
+	DataHoraFim    time.Time
+	Status         enum.StatusEnum
 }
 
-func AgendamentoFactory(agendamentoId int, maquina Maquina, dataHoraInicio time.Time, dataHoraFim time.Time, status enum.StatusEnum) Agendamento {
+/* func AgendamentoFactory(agendamentoId int, maquina Maquina, dataHoraInicio time.Time, dataHoraFim time.Time, status enum.StatusEnum) Agendamento {
 	return Agendamento{agendamentoId: agendamentoId,
 		maquina:        maquina,
 		dataHoraInicio: dataHoraInicio,
@@ -59,4 +59,4 @@ func (a Agendamento) GetDataHoraFim() time.Time {
 
 func (a Agendamento) GetStatus() enum.StatusEnum {
 	return a.status
-}
+} */

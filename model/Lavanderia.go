@@ -3,16 +3,16 @@ package model
 import "time"
 
 type Lavanderia struct {
-	empresaId         int
-	horarioAbertura   time.Time
-	horarioFechamento time.Time
-	diasFuncionamento []string
-	maquinas          []Maquina
-	usuarios          []Usuario
-	aberto            bool
+	EmpresaId         int
+	HorarioAbertura   time.Time
+	HorarioFechamento time.Time
+	DiasFuncionamento []string
+	Maquinas          []Maquina
+	Usuarios          []Usuario
+	Aberto            bool
 }
 
-func LavanderiaFactory(empresaId int, horarioAbertura time.Time, horarioFechamento time.Time, diasFuncionamento []string, maquinas []Maquina, usuarios []Usuario, aberto bool) Lavanderia {
+/* func LavanderiaFactory(empresaId int, horarioAbertura time.Time, horarioFechamento time.Time, diasFuncionamento []string, maquinas []Maquina, usuarios []Usuario, aberto bool) Lavanderia {
 	return Lavanderia{
 		empresaId:         empresaId,
 		horarioAbertura:   horarioAbertura,
@@ -77,4 +77,4 @@ func (l Lavanderia) GetUsuario() []Usuario {
 
 func (l Lavanderia) IsAberto() bool {
 	return l.aberto
-}
+} */
